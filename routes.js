@@ -13,8 +13,10 @@ route.post('/login/login', loginController.login );
 route.get('/login/logout', loginController.logout );
 
 route.get('/contato/index', loginRequired, contatoController.index);
-route.post('/contato/register',contatoController.register);
+route.post('/contato/register', loginRequired,contatoController.register);
 route.get('/contato/index/:id', loginRequired, contatoController.editIndex);
-route.get('/contato/edit/:id', loginRequired, contatoController.edit);
+route.post('/contato/edit/:id', loginRequired, contatoController.edit);
+route.get('/contato/delete/:id', loginRequired, contatoController.delete);
 
 module.exports = route;
+
