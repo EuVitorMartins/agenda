@@ -21,3 +21,8 @@
 .desFoco{
     background: rgba(255, 255, 255, 0.5);
 }
+
+.error-text{
+    color: red;
+    font-size: 11px
+}

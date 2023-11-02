@@ -8,7 +8,7 @@
           <div class="border desFoco w-75 p-3 mx-auto ">
             <h2 class="text-center mb-4">Criar Conta</h2>
             <%- include('includes/messagens') %>
-            <form action="/login/register" method="POST">
+            <form class="register" action="/login/register" method="POST">
               <input type="hidden" name="_csrf" value=<%=csrfToken%>>
               <div class="form-group">
                 <label>Seu nome:</label>
@@ -20,12 +20,12 @@
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Crie uma senha:</label>
-                <input type="password" class="form-control" name="password"  placeholder="Senha">
+                <input type="password" class="form-control senha" name="password"  placeholder="Senha">
                 <small id="emailHelp" class="form-text text-muted">Senha precisa ter entre 4 a 20 caracteres.</small>
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Confime sua senha:</label>
-                <input type="password" class="form-control" name="passwordConfirm"  placeholder="Confime a senha">
+                <input type="password" class="form-control senhaConfim" name="passwordConfirm"  placeholder="Confime a senha">
               </div>
               <button type="submit" class="btn btn-cor w-100">Criar</button>
             </form>
