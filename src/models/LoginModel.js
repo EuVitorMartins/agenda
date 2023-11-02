@@ -3,6 +3,7 @@ const validator = require('validator');
 const bcryptjs = require('bcryptjs');
 
 const LoginSchema = new mongoose.Schema({
+    nome: { type: String, required: true },
     email: { type: String, required: true },
     password: { type: String, required: true }
 });
@@ -42,7 +43,10 @@ class Login {
         if (this.errors.length > 0) return;
 
         await this.userExiste();
-
+        if (!this.body.nome) this.errors.push('Nome é obrigatório.');
+        if (this.body.password !== this.body.passwordConfirm) this.errors.push('As senha não são iguais.');
+        
+  
         if (this.errors.length > 0) return;
 
         const salt = bcryptjs.genSaltSync();
@@ -59,11 +63,13 @@ class Login {
 
     valida() {
         this.cleanUp()
-        if (!validator.isEmail(this.body.email)) this.errors.push('E-mail inválido.');
-
+       if (!validator.isEmail(this.body.email)) this.errors.push('E-mail inválido.');
+        
         if (this.body.password.length < 4 || this.body.password.length > 20) {
             this.errors.push('Senha precisa ter entre 4 a 20 caracteres.')
         };
+
+
     }
 
     cleanUp() {
@@ -74,8 +80,10 @@ class Login {
         }
 
         this.body = {
+            nome: this.body.nome,
             email: this.body.email,
-            password: this.body.password
+            password: this.body.password,
+            passwordConfirm: this.body.passwordConfirm
         };
     }
 }

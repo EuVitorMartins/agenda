@@ -21305,7 +21305,30 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ``, "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, `.fundo-cor{
+    background-color: #b6b6b7;
+}
+.fundo-cor2{
+    background-color: #c3c2c2;
+}
+
+.btn-cor{
+    background-color: #0b7ef1;
+    color: white;
+    font-weight: bold;
+    transition: 1s;
+}
+.btn-cor:hover{
+    background-color: #5597D9;
+    color: rgb(238, 238, 238);
+}
+
+
+
+.desFoco{
+    background: rgba(255, 255, 255, 0.5);
+}
+`, "",{"version":3,"sources":["webpack://./frontend/assets/css/staly.css"],"names":[],"mappings":"AAAA;IACI,yBAAyB;AAC7B;AACA;IACI,yBAAyB;AAC7B;;AAEA;IACI,yBAAyB;IACzB,YAAY;IACZ,iBAAiB;IACjB,cAAc;AAClB;AACA;IACI,yBAAyB;IACzB,yBAAyB;AAC7B;;;;AAIA;IACI,oCAAoC;AACxC","sourcesContent":[".fundo-cor{\r\n    background-color: #b6b6b7;\r\n}\r\n.fundo-cor2{\r\n    background-color: #c3c2c2;\r\n}\r\n\r\n.btn-cor{\r\n    background-color: #0b7ef1;\r\n    color: white;\r\n    font-weight: bold;\r\n    transition: 1s;\r\n}\r\n.btn-cor:hover{\r\n    background-color: #5597D9;\r\n    color: rgb(238, 238, 238);\r\n}\r\n\r\n\r\n\r\n.desFoco{\r\n    background: rgba(255, 255, 255, 0.5);\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

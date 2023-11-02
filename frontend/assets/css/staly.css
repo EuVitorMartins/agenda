@@ -1,0 +1,23 @@
+.fundo-cor{
+    background-color: #b6b6b7;
+}
+.fundo-cor2{
+    background-color: #c3c2c2;
+}
+
+.btn-cor{
+    background-color: #0b7ef1;
+    color: white;
+    font-weight: bold;
+    transition: 1s;
+}
+.btn-cor:hover{
+    background-color: #5597D9;
+    color: rgb(238, 238, 238);
+}
+
+
+
+.desFoco{
+    background: rgba(255, 255, 255, 0.5);
+}
