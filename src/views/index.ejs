@@ -24,9 +24,11 @@
               <% }) %> 
               </tr>
               <% } else { %>
-                <p class="text-center lead mt-5">Para exibir os contatos, tem que fazer login.</p>
-                <div class="d-flex justify-content-center ">
-                  <a class="btn btn-outline-dark " href="/login/index" role="button">Login</a>
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <p class="text-center lead"><strong>A fim de acessar a lista de contatos,</strong> é requerido que realize o processo de login. No entanto, se ainda não possui uma conta, tem a opção de criar uma.</p>
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
                 </div>
               <% } %>
             </table>

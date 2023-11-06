@@ -1,10 +1,10 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./frontend/assets/js/login.js":
-/*!*************************************!*\
-  !*** ./frontend/assets/js/login.js ***!
-  \*************************************/
+/***/ "./frontend/assets/js/LoginVerifica.js":
+/*!*********************************************!*\
+  !*** ./frontend/assets/js/LoginVerifica.js ***!
+  \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -41,7 +41,7 @@ var ValidaLogin = /*#__PURE__*/function () {
       e.preventDefault();
       this.validaCampo();
       this.validaSenhas();
-      if (this.validaCampo() && this.validaSenhas()) this.formulario.submit();
+      if (this.validaSenhas() && this.validaCampo()) this.formulario.submit();
     }
   }, {
     key: "validaCampo",
@@ -70,6 +70,18 @@ var ValidaLogin = /*#__PURE__*/function () {
         _iterator2.e(err);
       } finally {
         _iterator2.f();
+      }
+      var _iterator3 = _createForOfIteratorHelper(this.formulario.querySelectorAll('.form-control')),
+        _step3;
+      try {
+        for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
+          var _campo = _step3.value;
+          if (!_campo.value) return ehValido = false;
+        }
+      } catch (err) {
+        _iterator3.e(err);
+      } finally {
+        _iterator3.f();
       }
       return ehValido;
     }
@@ -21405,7 +21417,10 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.fundo-cor{
+___CSS_LOADER_EXPORT___.push([module.id, `body{
+    background-color: #ededed;
+}
+.fundo-cor{
     background-color: #b6b6b7;
 }
 .fundo-cor2{
@@ -21432,7 +21447,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.fundo-cor{
 .error-text{
     color: red;
     font-size: 11px
-}`, "",{"version":3,"sources":["webpack://./frontend/assets/css/staly.css"],"names":[],"mappings":"AAAA;IACI,yBAAyB;AAC7B;AACA;IACI,yBAAyB;AAC7B;;AAEA;IACI,yBAAyB;IACzB,YAAY;IACZ,iBAAiB;IACjB,cAAc;AAClB;AACA;IACI,yBAAyB;IACzB,yBAAyB;AAC7B;;;;AAIA;IACI,oCAAoC;AACxC;;AAEA;IACI,UAAU;IACV;AACJ","sourcesContent":[".fundo-cor{\r\n    background-color: #b6b6b7;\r\n}\r\n.fundo-cor2{\r\n    background-color: #c3c2c2;\r\n}\r\n\r\n.btn-cor{\r\n    background-color: #0b7ef1;\r\n    color: white;\r\n    font-weight: bold;\r\n    transition: 1s;\r\n}\r\n.btn-cor:hover{\r\n    background-color: #5597D9;\r\n    color: rgb(238, 238, 238);\r\n}\r\n\r\n\r\n\r\n.desFoco{\r\n    background: rgba(255, 255, 255, 0.5);\r\n}\r\n\r\n.error-text{\r\n    color: red;\r\n    font-size: 11px\r\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./frontend/assets/css/staly.css"],"names":[],"mappings":"AAAA;IACI,yBAAyB;AAC7B;AACA;IACI,yBAAyB;AAC7B;AACA;IACI,yBAAyB;AAC7B;;AAEA;IACI,yBAAyB;IACzB,YAAY;IACZ,iBAAiB;IACjB,cAAc;AAClB;AACA;IACI,yBAAyB;IACzB,yBAAyB;AAC7B;;;;AAIA;IACI,oCAAoC;AACxC;;AAEA;IACI,UAAU;IACV;AACJ","sourcesContent":["body{\r\n    background-color: #ededed;\r\n}\r\n.fundo-cor{\r\n    background-color: #b6b6b7;\r\n}\r\n.fundo-cor2{\r\n    background-color: #c3c2c2;\r\n}\r\n\r\n.btn-cor{\r\n    background-color: #0b7ef1;\r\n    color: white;\r\n    font-weight: bold;\r\n    transition: 1s;\r\n}\r\n.btn-cor:hover{\r\n    background-color: #5597D9;\r\n    color: rgb(238, 238, 238);\r\n}\r\n\r\n\r\n\r\n.desFoco{\r\n    background: rgba(255, 255, 255, 0.5);\r\n}\r\n\r\n.error-text{\r\n    color: red;\r\n    font-size: 11px\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -22756,12 +22771,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _assets_css_staly_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/css/staly.css */ "./frontend/assets/css/staly.css");
-/* harmony import */ var _assets_js_login__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/js/login */ "./frontend/assets/js/login.js");
+/* harmony import */ var _assets_js_LoginVerifica__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/js/LoginVerifica */ "./frontend/assets/js/LoginVerifica.js");
 
 
 
 
-var registro = new _assets_js_login__WEBPACK_IMPORTED_MODULE_3__["default"]('register');
+var registro = new _assets_js_LoginVerifica__WEBPACK_IMPORTED_MODULE_3__["default"]('register');
 registro.eventos();
 })();
 

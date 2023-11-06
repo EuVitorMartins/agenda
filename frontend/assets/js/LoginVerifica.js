@@ -15,23 +15,23 @@ export default class ValidaLogin {
         e.preventDefault();
         this.validaCampo();
         this.validaSenhas();
-        if (this.validaCampo() && this.validaSenhas()) this.formulario.submit();
+        if (this.validaSenhas() &&  this.validaCampo()) this.formulario.submit();
 
     }
 
     validaCampo() {
         let ehValido = true
-
         for (let errorText of this.formulario.querySelectorAll('.error-text')) {
             errorText.remove();
         }
 
         for (let campo of this.formulario.querySelectorAll('.form-control')) {
-
             if (!campo.value) this.criaErro(campo, `O campo não pode esta em branco.`);
-            
         }
-        return ehValido;
+        for (let campo of this.formulario.querySelectorAll('.form-control')) {
+            if (!campo.value) return ehValido = false;
+        }
+        return ehValido; 
     }
 
     validaSenhas() {
