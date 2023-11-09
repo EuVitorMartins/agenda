@@ -4,7 +4,7 @@
     "description": "",
     "main": "server.js",
     "scripts": {
-        "start": "node server.js --ignore public --ignore frontend",
+        "start": "node server.js",
         "dev": "webpack -w"
     },
     "keywords": [],
