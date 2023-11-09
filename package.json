@@ -4,7 +4,7 @@
     "description": "",
     "main": "server.js",
     "scripts": {
-        "start": "nodemon server.js --ignore public --ignore frontend",
+        "start": "node server.js --ignore public --ignore frontend",
         "dev": "webpack -w"
     },
     "keywords": [],
@@ -25,8 +25,9 @@
         "mongoose": "^7.6.2",
         "regenerator-runtime": "^0.14.0",
         "style-loader": "^3.3.3",
-        "validator": "^13.11.0",
-
+        "validator": "^13.11.0"
+    },
+    "devDependencies": {
         "@babel/cli": "^7.23.0",
         "@babel/core": "^7.23.0",
         "@babel/preset-env": "^7.22.20",
