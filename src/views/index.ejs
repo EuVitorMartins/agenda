@@ -10,31 +10,46 @@
 
           <%- include('includes/messagens') %>
 
-          <% if (user) { %>
-          <div class="responsive-table">
-            <table class="table">  
-              <% contatos.forEach(contato => { %>
-                <tr>
-                <td><%= contato.data %></td>
-                <td><%= contato.nome + " " + contato.sobrenome %></td>
-                <td><%= contato.email %></td>
-                <td><%= contato.telefone %></td>
-                <td><a href="/contato/index/<%= contato._id %>">Editar</a></td>
-                <td><a class=" text-danger " href="/contato/delete/<%= contato._id %>">Deletar</a></td>
-              <% }) %> 
-              </tr>
-              <% } else { %>
-                <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                <p class="text-center lead"><strong>A fim de acessar a lista de contatos,</strong> é requerido que realize o processo de login. No entanto, se ainda não possui uma conta, tem a opção de criar uma.</p>
-                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
+            <% if (user) { %>
+
+              <% if(contatos.length> 0) { %>
+                <div class="responsive-table">
+                  <table class="table">
+                    <% contatos.forEach(contato=> { %>
+                      <tr>
+                        <td>
+                          <%= contato.data %>
+                        </td>
+                        <td>
+                          <%= contato.nome + " " + contato.sobrenome %>
+                        </td>
+                        <td>
+                          <%= contato.email %>
+                        </td>
+                        <td>
+                          <%= contato.telefone %>
+                        </td>
+                        <td><a href="/contato/index/<%= contato._id %>">Editar</a></td>
+                        <td><a class=" text-danger " href="/contato/delete/<%= contato._id %>">Deletar</a></td>
+                        <% }) %>
+                      </tr>
+                      <% } else { %>
+                        <p class="text-center lead">Não existem contatos na sua agenda.</p>
+                        <% } %>
+                          <% } else { %>
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                              <p class="text-center lead"><strong>A fim de acessar a lista de contatos,</strong> é
+                                requerido que realize o processo de login. No entanto, se ainda não possui uma conta,
+                                tem a opção de criar uma.</p>
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                          <% } %>
+                  </table>
                 </div>
-              <% } %>
-            </table>
-          </div>
         </div>
-        
+
       </div>
     </div>
 
